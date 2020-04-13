@@ -93,10 +93,7 @@ export class CreateNote extends Component {
                             }
                         </FormattedMessage>
                             <button className="btn btn-light" type="submit">
-                                {this.id ?
-                                    <FormattedMessage id="edit" defaultMessage="Edit"></FormattedMessage>
-                                    :<FormattedMessage id="create" defaultMessage="Create"></FormattedMessage>
-                                }
+                                <FormattedMessage id="save" defaultMessage="Save"/>
                             </button>
                         </form>
                     </div>

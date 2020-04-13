@@ -29,24 +29,26 @@ export class NotesList extends Component {
         fetch(`/api/notes/${id}`, { method: 'DELETE' })
             .then(() => this.setState({ notes: notes.filter(item => item._id !== id) }))
             .catch(err => console.log(err));
-    }
+    };
 
     render() {
         const { notes } = this.state;
         return (
             <div className="container p-4">
-                <div className="d-flex justify-content-end align-items-center mb-5 row">
-                    <span className="mr-2">
-                        <FormattedMessage id="create-new" defaultMessage="Create new note:"></FormattedMessage>
-                    </span>
-                    <Link to={'/create'}>
-                        <button className="btn btn-sm btn-outline-danger" type="button">+</button>
-                    </Link>
+                <div className="mb-5 row">
+                    <div className="col d-flex justify-content-end align-items-center">
+                        <span className="mr-2">
+                            <FormattedMessage id="create-new" defaultMessage="Create new note:" />
+                        </span>
+                        <Link to={'/create'}>
+                            <button className="btn btn-sm btn-outline-danger" type="button">+</button>
+                        </Link>
+                    </div>
                 </div>
                 <div className="row">
                     {notes.length === 0 &&
-                    <p>
-                        <FormattedMessage id="create-first" defaultMessage="Create your fist note"></FormattedMessage>
+                    <p className="col">
+                        <FormattedMessage id="create-first" defaultMessage="Create your fist note" />
                     </p>
                     }
                     { notes.map(item =>
@@ -60,4 +62,4 @@ export class NotesList extends Component {
             </div>
         );
     };
-};
+}

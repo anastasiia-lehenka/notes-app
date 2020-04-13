@@ -5,8 +5,8 @@ import { CreateNote } from './components/modify-note';
 import { IntlProvider, FormattedMessage } from 'react-intl';
 import messages from './languages';
 import logo from './assets/images/logo.png';
-import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss';
 
 class App extends Component {
     constructor(props) {
@@ -18,7 +18,7 @@ class App extends Component {
 
     changeLang = e => {
         this.setState({lang: e.target.value});
-    }
+    };
 
     render() {
         return (
@@ -33,7 +33,7 @@ class App extends Component {
                                     <img className="logo mr-3" src={logo} alt="logo"/>
                                 </Link>
                                 <h3>
-                                    <FormattedMessage id="app-title" defaultMessage="Notes App"></FormattedMessage>
+                                    <FormattedMessage id="app-title" defaultMessage="Notes App" />
                                 </h3>
                             </div>
                             <select className="custom-select" defaultValue="en" onChange={this.changeLang}>
