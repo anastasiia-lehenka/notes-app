@@ -1,0 +1,32 @@
+@import "bootstrap";
+
+.card {
+  min-height: 180px;
+  position: relative;
+
+  .icon {
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+    color: black;
+  }
+
+  .icon--edit {
+    top: 10px;
+    right: 10px;
+  }
+
+  .icon--delete {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  &:hover {
+    @extend .shadow-sm;
+
+    .icon {
+      display: inline-block;
+    }
+  }
+}
